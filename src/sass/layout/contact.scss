@@ -1,0 +1,53 @@
+@use "../utilities/functions" as *;
+
+.contact {
+  padding-block-start: rem(30px);
+  background-color: var(--variant);
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: rem(30px);
+
+  input {
+    display: block;
+    width: 100%;
+    box-shadow: 2px 2px 0 0 var(--dark);
+    border-radius: rem(8px);
+    border: 1px solid var(--black);
+    padding-inline: rem(8px);
+
+    &::placeholder {
+      color: var(--dark);
+    }
+  }
+}
+
+.contact-form {
+  width: 100%;
+  display: grid;
+  gap: rem(30px);
+
+  @media (min-width: 575px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  textarea {
+    width: 100%;
+    padding: rem(12px);
+    display: block;
+    resize: vertical;
+    box-shadow: 2px 2px 0 0 var(--dark);
+    border-radius: rem(8px);
+    border: 1px solid var(--black);
+    height: rem(200px);
+  }
+  button {
+    cursor: pointer;
+
+    @media (min-width: 575px) {
+      grid-column: 2 / 3;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@use "../utilities/functions" as *;
+
+.blog {
+  padding-block-start: 0;
+  &__photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(rem(350px), 100%), 1fr));
+    gap: rem(40px);
+
+    li {
+      img {
+        aspect-ratio: 1;
+        object-fit: cover;
+      }
+    }
+  }
+}

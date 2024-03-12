@@ -1,0 +1,31 @@
+@use "../utilities/functions" as *;
+
+.skills {
+  padding-block-start: 0;
+}
+.frontend-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(20px);
+  margin-top: rem(25px);
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: rem(40px);
+    border: 1px solid var(--black);
+    border-radius: rem(8px);
+    box-shadow: 2px 2px 0 0 var(--dark);
+
+    img {
+      width: rem(50px);
+      height: rem(50px);
+      aspect-ratio: 1;
+    }
+  }
+}
+
+.wrapper-backend {
+  margin-top: rem(30px);
+}

@@ -1,0 +1,60 @@
+@use "../utilities/functions" as *;
+.hero {
+  padding-block: 0 var(--section-padding);
+
+  .container {
+    display: grid;
+
+    @media (min-width: 992px) {
+      grid-template-columns: 1fr 1.5fr;
+      align-items: center;
+      gap: rem(40px);
+    }
+  }
+
+  &__banner {
+    mask-image: url("../assets/Blog.svg");
+    -webkit-mask-image: url("../assets/Blog.svg");
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: auto;
+    -webkit-mask-size: auto;
+  }
+
+  &__content {
+    text-align: center;
+
+    @media (min-width: 992px) {
+      text-align: left;
+    }
+
+    .hero-title {
+      @media (min-width: 768px) {
+        line-height: 1.1;
+      }
+    }
+
+    .cut-out {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  .section-text {
+    margin-block: rem(24px) rem(36px);
+  }
+
+  .btn-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: rem(12px);
+    @media (min-width: 992px) {
+      justify-content: flex-start;
+    }
+  }
+}

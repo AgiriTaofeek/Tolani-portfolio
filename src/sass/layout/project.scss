@@ -1,0 +1,35 @@
+@use "../utilities/functions" as *;
+
+.project {
+  padding-block-start: 0;
+  .title-wrapper {
+    margin-bottom: rem(20px);
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(rem(350px), 100%), 1fr));
+    gap: rem(40px);
+
+    li {
+      border: 1px solid var(--black);
+      padding: rem(20px);
+      border-radius: rem(8px);
+
+      img {
+        aspect-ratio: 1;
+        object-fit: cover;
+      }
+      a {
+        margin-top: rem(20px);
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+          font-size: rem(20px);
+        }
+      }
+    }
+  }
+}
